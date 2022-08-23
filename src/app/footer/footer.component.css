@@ -1,0 +1,7 @@
+.container{
+    margin-top: 1.5rem;
+}
+.row{
+    display: flex;
+    text-align: center;
+}
