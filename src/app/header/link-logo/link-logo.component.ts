@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-link-logo',
@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LinkLogoComponent implements OnInit {
 
-  @Input() srcIcon:string = ""
-  @Input() hrefLink: string = ""
   constructor() { }
 
   ngOnInit(): void {

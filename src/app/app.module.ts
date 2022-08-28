@@ -15,6 +15,14 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardSoftComponent } from './hard-soft/hard-soft.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component'
+import { FormsModule } from '@angular/forms';
+import { NewExperienceComponent } from './exp-educ/experience/new-experience/new-experience.component';
+import { UpdateExperienceComponent } from './exp-educ/experience/update-experience/update-experience.component';
+import { NewEducationComponent } from './exp-educ/education/new-education/new-education.component';
+import { UpdateEducationComponent } from './exp-educ/education/update-education/update-education.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +37,20 @@ import { FooterComponent } from './footer/footer.component';
     EducationComponent,
     HardSoftComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    HomeComponent,
+    NewExperienceComponent,
+    UpdateExperienceComponent,
+    NewEducationComponent,
+    UpdateEducationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    FormsModule,
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
