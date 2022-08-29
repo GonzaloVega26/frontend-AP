@@ -1,16 +1,33 @@
 <div class="container-fluid">
-    <h1>Projects</h1>
+    <h2>Projects</h2> <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/new-project">Add New Project!</button>
     <div class="row">
-        <div class="col-sm-12 col-md-5 col-lg-5">
-            <h2>Project Title</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae eos quibusdam voluptates dolorum ab quasi impedit, praesentium laudantium expedita consequatur!</p>
-        </div>
-
-        <div class="col-sm-12 col-md-6 col-lg-6 offset-md-1 offset-lg-1">
-            <a href="#" target="_blank">
-                <img class="project-picture img-fluid"  src="assets/encrypter-screenshot.png" alt="Project Picture">
-            </a>
-            
+        <div class="col-lg-11">
+            <h2 *ngIf="projects.length == 0;else other_content" class="sad-msg">Add a project ;)</h2>
         </div>
     </div>
+        <ng-template #other_content>
+            <div class="row" *ngFor="let project of projects">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="project-container" >
+                        <h3>{{project.title}}</h3> 
+                        <div class="actions">
+                            <a href="/update-project/{{project.id}}"> <img class="icon" src="/assets/edit-icon.png" alt="Update Project"></a> 
+                            <a href="" (click)="onDelete(project.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Project"></a>
+                            
+                        </div>
+    
+                        <p>{{project.description}}</p>
+
+                        <p *ngIf="project.hostURL"> Project link is <a [href]="project.hostURL">here</a></p>
+                        
+                    </div>
+    
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 d-flex justify-content-end" *ngIf="project.imgURL">
+                    <img [src]="project.imgURL" alt="" class="img-fluid project-photo">
+                </div>
+            </div>
+            
+        </ng-template>
+    
 </div>

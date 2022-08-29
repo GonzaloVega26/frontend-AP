@@ -1,0 +1,35 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form (ngSubmit)="onUpdate()" novalidate>
+            <!-- Job's Title input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="name" name="name" class="form-control form-control-lg"
+              [(ngModel)]="name"  required/>
+              <label class="form-label" for="name">Job's Title</label>
+            </div>
+  
+            <!-- Percentage input -->
+            <div class="form-outline mb-4">
+              <input type="number" id="percentage" name="percentage" class="form-control form-control-lg"
+              [(ngModel)]="percentage"  required  min="0" max="100"/>
+              <label class="form-label" for="percentage">Percentage:</label>
+            </div>
+  
+            <!-- Color input -->
+            <div class="form-outline mb-4">
+                <input type="color" id="color" name="color" class="form-control form-control-lg"
+                [(ngModel)]="color"/>
+                <label class="form-label" for="color">Color:</label>
+              </div>
+  
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" >Create Skill</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

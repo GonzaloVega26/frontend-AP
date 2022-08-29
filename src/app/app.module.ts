@@ -23,6 +23,11 @@ import { NewExperienceComponent } from './exp-educ/experience/new-experience/new
 import { UpdateExperienceComponent } from './exp-educ/experience/update-experience/update-experience.component';
 import { NewEducationComponent } from './exp-educ/education/new-education/new-education.component';
 import { UpdateEducationComponent } from './exp-educ/education/update-education/update-education.component';
+import { NewSkillComponent } from './hard-soft/new-skill/new-skill.component';
+import { UpdateSkillComponent } from './hard-soft/update-skill/update-skill.component';
+import { NewProjectComponent } from './projects/new-project/new-project.component';
+import { UpdateProjectComponent } from './projects/update-project/update-project.component';
+import { UpdatePersonaComponent } from './about/update-persona/update-persona.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,12 @@ import { UpdateEducationComponent } from './exp-educ/education/update-education/
     NewExperienceComponent,
     UpdateExperienceComponent,
     NewEducationComponent,
-    UpdateEducationComponent
+    UpdateEducationComponent,
+    NewSkillComponent,
+    UpdateSkillComponent,
+    NewProjectComponent,
+    UpdateProjectComponent,
+    UpdatePersonaComponent
   ],
   imports: [
     BrowserModule,

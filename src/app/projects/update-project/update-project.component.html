@@ -1,0 +1,43 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form (ngSubmit)="onUpdate()" novalidate>
+            <!-- Job's Title input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="title" name="title" class="form-control form-control-lg"
+              [(ngModel)]="title"  required/>
+              <label class="form-label" for="title">Project's Title</label>
+            </div>
+  
+            <!-- Description input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="description" name="description" class="form-control form-control-lg"
+              [(ngModel)]="description"  required />
+              <label class="form-label" for="description">Description:</label>
+            </div>
+
+            <!-- Host URL input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="hostURL" name="hostURL" class="form-control form-control-lg"
+                [(ngModel)]="hostURL"  />
+                <label class="form-label" for="hostURL">Host URL: (optional)</label>
+              </div>
+
+              <!-- IMG URL input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="imgURL" name="imgURL" class="form-control form-control-lg"
+                [(ngModel)]="imgURL" />
+                <label class="form-label" for="imgURL">Img URL: (optional)</label>
+              </div>
+  
+  
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" >Update Project</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

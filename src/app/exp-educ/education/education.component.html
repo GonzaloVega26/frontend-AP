@@ -2,16 +2,20 @@
     <h2>Education</h2> <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/new-education">Add New Education!</button>
     <div class="row">
         <div class="col-lg-11">
-            <ul>
-                <li *ngFor="let education of educations">
-                    <h3>{{education.name}}:</h3> 
-                    <a href="/update-education/{{ education.id }}"> <img class="icon" src="/assets/edit-icon.png" alt="Update education"></a> 
-                    <a href="/" (click)="onDelete(education.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete education"></a>
+            <h2 *ngIf="educations.length == 0;else other_content" class="sad-msg">Nothing Added Here :(</h2>
+            <ng-template #other_content>
+                <ul *ng>
+                    <li  *ngFor="let education of educations">
+                        <h3>{{education.name}}</h3> 
+                        <div class="actions">
+                            <a href="/update-education/{{ education.id }}"> <img class="icon" src="/assets/edit-icon.png" alt="Update education"></a> 
+                            <a href="/" (click)="onDelete(education.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete education"></a>
+                        </div>
+                        <p>{{education.description}}</p>
+                    </li>
                     
-                    <p>{{education.description}}</p>
-                </li>
-                
-            </ul>
+                </ul>
+            </ng-template>
         </div>
     </div>
 </div>

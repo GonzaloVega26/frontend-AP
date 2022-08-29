@@ -1,3 +1,19 @@
-.row{
-    text-align: center;
+h2{
+    display: block;
+}
+
+.icon{
+    display: inline-block;
+    margin: 0 0 0 1.1em;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    scale: 1.4;
+}
+
+
+.sad-msg{
+    display: flex;
+    justify-content: center;
 }

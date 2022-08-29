@@ -11,6 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class ExperienceComponent implements OnInit {
   experiences: Experience[] = []
+  
  
   constructor(private experienceService: ExperienceService, 
     private tokenService: TokenService, private router: Router) { }
