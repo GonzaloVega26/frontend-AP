@@ -1,3 +1,8 @@
+.container-fluid{
+    background: linear-gradient(#222831,#393E46);
+    color:white
+}
+
 h3{
     display: inline;
 }
@@ -20,3 +25,4 @@ h3{
     display: flex;
     justify-content: center;
 }
+

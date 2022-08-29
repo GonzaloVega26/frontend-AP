@@ -1,22 +1,24 @@
-<div class="container">
-    <h2>Job Experiences</h2> <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/new-experience">Add New Experience!</button>
-    <div class="row">
-        <div class="col-lg-11">
-            <h2 *ngIf="experiences.length == 0;else other_content" class="sad-msg">Nothing Added Here :(</h2>
-            <ng-template #other_content>
-            <ul>
-                <li *ngFor="let experience of experiences">
-                    <h3>{{experience.name}}</h3> 
-                    <div class="actions">
-                        <a href="/update-experience/{{experience.id}}"> <img class="icon" src="/assets/edit-icon.png" alt="Update Experience"></a> 
-                        <a href="/" (click)="onDelete(experience.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Experience"></a>
-                        
-                    </div>
-                    <p>{{experience.description}}</p>
-                </li>
-                
-            </ul>
-            </ng-template>
+<div class="container-fluid">
+    <div class="container">
+        <h2>Job Experiences</h2> <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/new-experience">Add New Experience!</button>
+        <div class="row">
+            <div class="col-lg-11">
+                <h2 *ngIf="experiences.length == 0;else other_content" class="sad-msg">Nothing Added Here :(</h2>
+                <ng-template #other_content>
+                <ul>
+                    <li *ngFor="let experience of experiences">
+                        <h3>{{experience.name}}</h3> 
+                        <div class="actions">
+                            <a href="/update-experience/{{experience.id}}"> <img class="icon" src="/assets/edit-icon.png" alt="Update Experience"></a> 
+                            <a href="/" (click)="onDelete(experience.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Experience"></a>
+                            
+                        </div>
+                        <p>{{experience.description}}</p>
+                    </li>
+                    
+                </ul>
+                </ng-template>
+            </div>
         </div>
     </div>
 </div>

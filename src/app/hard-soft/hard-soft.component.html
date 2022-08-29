@@ -1,32 +1,34 @@
-<div class="container">
-    <h2>Hard & Soft Skills</h2>
-    <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/new-skill">Add New Skill!</button>
-    <div class="row">
-        <h2 *ngIf="skills.length == 0;else other_content" class="sad-msg"> You have to have at least One ;)</h2>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <ng-template #other_content>
-                <div *ngFor="let skill of skills">
-                    <circle-progress 
-                        [percent]= skill.percentage
-                        [radius]="50"
-                        [title]= skill.name
-                        [showSubtitle]="false"
-                        [showUnits]="false"
-                        [outerStrokeWidth]="6"
-                        [innerStrokeWidth]="4"
-                        [outerStrokeColor]= skill.color
-                        [innerStrokeColor]="'rgba(0,0,0,0.5)'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                    ></circle-progress>
-                    <a href="/update-skill/{{skill.id}}"> <img class="icon" src="/assets/edit-icon.png" alt="Update Skill"></a> 
-                        <a href="#" (click)="onDelete(skill.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Skill"></a>
-                </div>
-               
-            </ng-template>
-            
-            
+<div class="container-fluid">
+    <div class="container">
+        <h2>Hard & Soft Skills</h2>
+        <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/new-skill">Add New Skill!</button>
+        <div class="row">
+            <h2 *ngIf="skills.length == 0;else other_content" class="sad-msg"> You have to have at least One ;)</h2>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <ng-template #other_content>
+                    <div *ngFor="let skill of skills" class="circle-container">
+                        <circle-progress 
+                            [percent]= skill.percentage
+                            [radius]="50"
+                            [title]= skill.name
+                            [showSubtitle]="false"
+                            [showUnits]="false"
+                            [outerStrokeWidth]="6"
+                            [innerStrokeWidth]="4"
+                            [outerStrokeColor]= skill.color
+                            [innerStrokeColor]="'rgba(0,0,0,0.5)'"
+                            [animation]="true"
+                            [animationDuration]="300"
+                        ></circle-progress>
+                        <div class="actions">
+                            <a href="/update-skill/{{skill.id}}"> <img class="icon" src="/assets/edit-icon.png" alt="Update Skill"></a> 
+                            <a href="#" (click)="onDelete(skill.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Skill"></a>
+                        </div>
+                    </div>
+                   
+                </ng-template>
+            </div>
         </div>
-        
     </div>
 </div>
+
