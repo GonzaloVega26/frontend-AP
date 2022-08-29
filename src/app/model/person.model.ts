@@ -1,12 +1,16 @@
 export class Person{
     id?: number;
-    name: String;
-    firstName: String;
-    img: String
+    name: string;
+    title: string;
+    about: string;
+    imgURL: string;
+    bannerURL: string;
 
-    constructor(name: String, firstName: String, img: String){
+    constructor(name: string, title: string, about: string, imgURL: string, bannerURL:string){
         this.name = name;
-        this.firstName = firstName;
-        this.img = img;
+        this.title = title;
+        this.about = about;
+        this.imgURL = imgURL;
+        this.bannerURL = bannerURL;
     }
 }

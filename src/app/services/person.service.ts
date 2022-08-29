@@ -7,11 +7,13 @@ import { Person } from '../model/person.model';
   providedIn: 'root'
 })
 export class PersonService {
-URL = "http://localhost:8080/person/"
-  constructor(private http:HttpClient) { }
+personURL = "http://localhost:8080/person"
+  constructor(private httpClient:HttpClient) { }
   
   public getOnePerson():Observable<Person>{
-    return this.http.get<Person>(this.URL+"get-one");
+    return this.httpClient.get<Person>(this.personURL+"/get-one");
   }
-  
+  public update(person: Person): Observable<any>{
+    return this.httpClient.put<any>(this.personURL + `/update-person`, person);
+  }
 }

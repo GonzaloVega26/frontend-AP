@@ -1,0 +1,50 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form (ngSubmit)="onUpdate()" novalidate>
+            <!-- Job's Title input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="name" name="name" class="form-control form-control-lg"
+              [(ngModel)]="name"  required/>
+              <label class="form-label" for="name">Full Name</label>
+            </div>
+  
+            <!-- Description input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="title" name="title" class="form-control form-control-lg"
+              [(ngModel)]="title"  required />
+              <label class="form-label" for="title">Title::</label>
+            </div>
+
+            <!-- Img URL input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="imgURL" name="imgURL" class="form-control form-control-lg"
+                [(ngModel)]="imgURL"  required/>
+                <label class="form-label" for="imgURL">Img URL:</label>
+              </div>
+
+              <!-- Banner URL input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="bannerURL" name="bannerURL" class="form-control form-control-lg"
+                [(ngModel)]="bannerURL"  required/>
+                <label class="form-label" for="bannerURL">Banner URL:</label>
+              </div>
+  
+               <!-- About URL input -->
+            <div class="form-outline mb-4">
+              <textarea  name="" id="about" name="about" class="form-control form-control-lg"
+               cols="30" rows="10" [(ngModel)]="about"  required></textarea>
+              
+              <label class="form-label" for="about">About Me:</label>
+            </div>
+  
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" >Update!</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonService } from 'src/app/services/person.service';
 
 @Component({
   selector: 'app-banner',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
-  constructor() { }
+ bannerURL:string =""
+  constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
+    this.personService.getOnePerson().subscribe(data =>{
+      this.bannerURL = data.bannerURL;
+    });
   }
 
 }

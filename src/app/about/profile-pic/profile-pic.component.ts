@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonService } from 'src/app/services/person.service';
 
 @Component({
   selector: 'app-profile-pic',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-pic.component.css']
 })
 export class ProfilePicComponent implements OnInit {
-
-  constructor() { }
+  imgURL:string = ""
+  constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
+    this.personService.getOnePerson().subscribe(data =>{
+      this.imgURL = data.imgURL;
+    });
   }
 
 }
