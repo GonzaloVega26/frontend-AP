@@ -6,3 +6,15 @@
     position: relative;
 }
     
+
+@media screen and (max-width: 576px) {
+    
+    .profile-pic{
+        position: initial;
+        left: 0px;
+        bottom: 0px;
+        max-height: 50vh;
+    }
+    
+    
+}

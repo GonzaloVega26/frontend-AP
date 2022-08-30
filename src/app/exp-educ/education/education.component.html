@@ -8,7 +8,7 @@
                     <ul >
                         <li  *ngFor="let education of educations">
                             <h3>{{education.name}}</h3> 
-                            <div class="actions">
+                            <div class="actions" *ngIf="isLogged">
                                 <a href="/update-education/{{ education.id }}"> <img class="icon" src="/assets/edit-icon.png" alt="Update education"></a> 
                                 <a href="/" (click)="onDelete(education.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete education"></a>
                             </div>

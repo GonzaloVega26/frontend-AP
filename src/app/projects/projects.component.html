@@ -10,7 +10,7 @@
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="project-container" >
                         <h3>{{project.title}}</h3> 
-                        <div class="actions">
+                        <div class="actions" *ngIf="isLogged">
                             <a href="/update-project/{{project.id}}"> <img class="icon" src="/assets/edit-icon.png" alt="Update Project"></a> 
                             <a href="" (click)="onDelete(project.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Project"></a>
                             

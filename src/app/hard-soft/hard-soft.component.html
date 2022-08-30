@@ -21,7 +21,7 @@
                             [animation]="true"
                             [animationDuration]="300"
                         ></circle-progress>
-                        <div class="actions">
+                        <div class="actions" *ngIf="isLogged">
                             <a href="/update-skill/{{skill.id}}"> <img class="icon" src="/assets/edit-icon.png" alt="Update Skill"></a> 
                             <a href="#" (click)="onDelete(skill.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Skill"></a>
                         </div>

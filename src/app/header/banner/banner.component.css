@@ -6,3 +6,7 @@ img{
 .container-fluid{
     background-color: #393E46;
 }
+
+.banner{
+    max-height: 40vh;
+}
