@@ -7,7 +7,7 @@ import { Experience } from '../model/experience';
   providedIn: 'root'
 })
 export class ExperienceService {
-  expURL = "http://localhost:8080/experience";
+  expURL = "https://backend-portfolio-gv.herokuapp.com/experience";
 
   constructor(private httpClient: HttpClient) { }
 

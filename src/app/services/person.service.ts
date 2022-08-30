@@ -7,7 +7,7 @@ import { Person } from '../model/person.model';
   providedIn: 'root'
 })
 export class PersonService {
-personURL = "http://localhost:8080/person"
+personURL = "https://backend-portfolio-gv.herokuapp.com/person"
   constructor(private httpClient:HttpClient) { }
   
   public getOnePerson():Observable<Person>{
