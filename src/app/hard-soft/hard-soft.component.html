@@ -2,17 +2,18 @@
     <div class="container">
         <h2>Hard & Soft Skills</h2>
         <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/new-skill">Add New Skill!</button>
-        <div class="row">
-            <h2 *ngIf="skills.length == 0;else other_content" class="sad-msg"> You have to have at least One ;)</h2>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <ng-template #other_content>
-                    <div *ngFor="let skill of skills" class="circle-container">
+        <h2 *ngIf="skills.length == 0;else other_content" class="sad-msg"> You have to have at least One ;)</h2>
+        <ng-template  #other_content>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let skill of skills">
+                    <div class="circle-container">
                         <circle-progress 
                             [percent]= skill.percentage
                             [radius]="50"
                             [title]= skill.name
                             [showSubtitle]="false"
                             [showUnits]="false"
+                            [titleColor]="'white'"
                             [outerStrokeWidth]="6"
                             [innerStrokeWidth]="4"
                             [outerStrokeColor]= skill.color
@@ -25,10 +26,9 @@
                             <a href="#" (click)="onDelete(skill.id)"> <img class="icon" src="/assets/delete-icon.png" alt="Delete Skill"></a>
                         </div>
                     </div>
-                   
-                </ng-template>
+                      
+                </div>
             </div>
-        </div>
+        </ng-template>
     </div>
 </div>
-

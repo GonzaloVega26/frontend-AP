@@ -5,7 +5,7 @@
             <div class="col-lg-11">
                 <h2 *ngIf="educations.length == 0;else other_content" class="sad-msg">Nothing Added Here :(</h2>
                 <ng-template #other_content>
-                    <ul *ng>
+                    <ul >
                         <li  *ngFor="let education of educations">
                             <h3>{{education.name}}</h3> 
                             <div class="actions">

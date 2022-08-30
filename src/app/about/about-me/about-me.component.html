@@ -4,10 +4,8 @@
             <app-profile-pic></app-profile-pic>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 offset-md-1 offset-lg-1 offset-xl-1">
-            <!-- <h1>{{ person.name }}</h1>
-            <h2> {{ person.title }} </h2> -->
-            <h1>Gonzalo Vega</h1>
-            <h2> Full-Stack Web Java y JS </h2>
+            <h1>{{ person.name }}</h1>
+            <h2> {{ person.title }} </h2>
             <button *ngIf="isLogged" type="submit" class="btn btn-dark" routerLink="/update-person">Edit Profile!</button>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
